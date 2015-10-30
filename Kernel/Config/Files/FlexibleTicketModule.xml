@@ -60,7 +60,7 @@
         <Group>FlexibleTicketModule</Group>
         <SubGroup>Frontend::Agent::Ticket::ViewFlexible::Sample1</SubGroup>
         <Setting>
-            <String Regex="">Customers' visit</String>
+            <String Regex="">Customers visit</String>
         </Setting>
     </ConfigItem>
     <ConfigItem Name="Ticket::Frontend::FlexibleTicketDialog::Sample1###Permission" Required="1" Valid="1">
@@ -157,7 +157,7 @@
         <Group>FlexibleTicketModule</Group>
         <SubGroup>Frontend::Agent::Ticket::ViewFlexible::Sample2</SubGroup>
         <Setting>
-            <String Regex="">Visit at customers' site</String>
+            <String Regex="">Visit at customers site</String>
         </Setting>
     </ConfigItem>
     <ConfigItem Name="Ticket::Frontend::FlexibleTicketDialog::Sample2###Permission" Required="1" Valid="1">
