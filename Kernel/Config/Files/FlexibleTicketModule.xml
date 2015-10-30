@@ -95,7 +95,7 @@
         <Group>FlexibleTicketModule</Group>
         <SubGroup>Frontend::Agent::Ticket::ViewFlexible::Sample1</SubGroup>
         <Setting>
-            <String Regex="">customer</String>
+            <String Regex="">Agent</String>
         </Setting>
     </ConfigItem>
     <ConfigItem Name="Ticket::Frontend::FlexibleTicketDialog::Sample1###Subject" Required="1" Valid="1">
@@ -103,7 +103,7 @@
         <Group>FlexibleTicketModule</Group>
         <SubGroup>Frontend::Agent::Ticket::ViewFlexible::Sample1</SubGroup>
         <Setting>
-            <String Regex="">[% Translate("Phone call") | html %]!</String>
+            <String Regex="">[% Translate("Phone Call") | html %]!</String>
         </Setting>
     </ConfigItem>
     <ConfigItem Name="Ticket::Frontend::FlexibleTicketDialog::Sample1###Body" Required="1" Valid="1">
