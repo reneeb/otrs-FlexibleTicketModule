@@ -1,16 +1,17 @@
 {
     "name": "FlexibleTicketModule",
-    "version": "5.0.1",
+    "version": "5.0.2",
     "framework": [
         "5.0.x"
     ],
     "vendor": {
-        "name":  "Perl-Services.de",
+        "name": "Perl-Services.de",
         "url": "http://www.perl-services.de"
     },
     "license": "GNU AFFERO GENERAL PUBLIC LICENSE Version 3, November 2007",
     "description" : {
-        "en": "Define your own dialogs for the ticket zoom",
-        "de": "Definiere eigene Dialoge für die Ticketansicht"
+        "en": "Define your own dialogs for the ticket zoom.",
+        "de": "Definiere eigene Dialoge für die Ticketansicht.",
+        "hu": "Saját párbeszédablakok meghatározása a jegynagyításhoz."
     }
 }

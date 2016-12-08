@@ -1,0 +1,35 @@
+=encoding utf-8
+
+=head1 NÉV
+
+FlexibleTicketModule - egyéni párbeszédablakok a jegynagyításhoz
+
+=head1 LEÍRÁS
+
+Ha további párbeszédablakokra van szüksége a jegynagyításnál (például ha új 
+párbeszédablakokat szeretne hozzáadni a látogatások kezeléséhez az ügyfelek 
+oldalán), akkor ezt a kiegészítőt használhatja a párbeszédablakok 
+meghatározásához.
+
+Az összes párbeszédablak az AgentTicketPhoneOutbound modulon alapszik, de 
+meghatározhat különféle dolgokat, mint például bejegyzéstípus, megjelenített 
+mezők, stb. A rendszerbeállításokban két minta beállítást kap, de további 
+párbeszédablakokat is meghatározhat egy saját XML-fájlban.
+
+=head1 KÓDTÁROLÓ ÉS HIBAKÖVETŐ
+
+A kódtároló és a hibakövető a L<https://github.com/reneeb/otrs-FlexibleTicketModule> 
+címen érhető el.
+
+=head1 SZERZŐ ÉS LICENC
+
+Ezt a csomagot Renée Bäcker E<lt>otrs@perl-services.deE<gt> írta.
+
+A csomag az AGPL 3.0 feltételei szerint licencelt. Ha nem kapta meg ezt a 
+fájlt, akkor elolvashatja a L<http://www.gnu.org/licenses/agpl.txt> címen.
+
+=head1 MAGYAR FORDÍTÁS
+
+A magyar fordítást az OTRS-megoldások csapata készítette.
+Copyright (C) 2016 Úr Balázs, L<http://otrs-megoldasok.hu>
+

@@ -1,14 +1,14 @@
-<?xml version="1.0" encoding="iso-8859-1"?>
+<?xml version="1.0" encoding="utf-8"?>
 <otrs_config version="1.0" init="Config">
     <ConfigItem Name="Frontend::Module###AgentFlexibleTicketDialog" Required="0" Valid="1">
-        <Description Translatable="1">Frontend module for your own ticket dialogs.</Description>
+        <Description Translatable="1">Frontend module registration for your own ticket dialogs.</Description>
         <Group>FlexibleTicketModule</Group>
         <SubGroup>Frontend::Agent::ModuleRegistration</SubGroup>
         <Setting>
             <FrontendModuleReg>
-                <Description>Your own ticket dialog.</Description>
+                <Description Translatable="1">Your own ticket dialog.</Description>
                 <NavBarName>Ticket</NavBarName>
-                <Title>Your own ticket dialog.</Title>
+                <Title Translatable="1">Your own Ticket Dialog</Title>
                 <Loader>
                     <JavaScript>Core.Agent.TicketAction.js</JavaScript>
                 </Loader>
@@ -16,7 +16,7 @@
         </Setting>
     </ConfigItem>
     <ConfigItem Name="Ticket::Frontend::MenuModule###212-FlexibleTicketDialog" Required="0" Valid="1">
-        <Description Translatable="1">shows links to all your own ticket dialogs in the ticket menu.</Description>
+        <Description Translatable="1">Shows links to all your own ticket dialogs in the ticket menu.</Description>
         <Group>FlexibleTicketModule</Group>
         <SubGroup>Frontend::Agent::Ticket::MenuModule</SubGroup>
         <Setting>
@@ -31,9 +31,9 @@
         <SubGroup>Frontend::Agent::Ticket::MenuModule</SubGroup>
         <Setting>
             <Hash>
-                <Item Key="Name">Customer visited us</Item>
+                <Item Key="Name" Translatable="1">Customer visited us</Item>
                 <Item Key="Config">Sample1</Item>
-                <Item Key="Description" Translatable="1">A description for Sample1</Item>
+                <Item Key="Description" Translatable="1">A description for Sample1.</Item>
                 <Item Key="LinkParam"></Item>
                 <Item Key="Target"></Item>
                 <Item Key="PopupType">TicketAction</Item>
@@ -48,9 +48,9 @@
         <SubGroup>Frontend::Agent::Ticket::MenuModule</SubGroup>
         <Setting>
             <Hash>
-                <Item Key="Name">We visited Customer</Item>
+                <Item Key="Name" Translatable="1">We visited Customer</Item>
                 <Item Key="Config">Sample2</Item>
-                <Item Key="Description" Translatable="1">A description for Sample2</Item>
+                <Item Key="Description" Translatable="1">A description for Sample2.</Item>
                 <Item Key="LinkParam"></Item>
                 <Item Key="Target"></Item>
                 <Item Key="PopupType">TicketAction</Item>
@@ -64,7 +64,7 @@
         <Group>FlexibleTicketModule</Group>
         <SubGroup>Frontend::Agent::Ticket::ViewFlexible::Sample1</SubGroup>
         <Setting>
-            <String Regex="">Customers visit</String>
+            <String Regex="" Translatable="1">Customer's visit</String>
         </Setting>
     </ConfigItem>
     <ConfigItem Name="Ticket::Frontend::FlexibleTicketDialog::Sample1###Permission" Required="1" Valid="1">
@@ -107,7 +107,7 @@
         <Group>FlexibleTicketModule</Group>
         <SubGroup>Frontend::Agent::Ticket::ViewFlexible::Sample1</SubGroup>
         <Setting>
-            <String Regex="">[% Translate("Phone Call") | html %]!</String>
+            <String Regex="">[% Translate("Phone call") | html %]!</String>
         </Setting>
     </ConfigItem>
     <ConfigItem Name="Ticket::Frontend::FlexibleTicketDialog::Sample1###Body" Required="1" Valid="1">
@@ -161,7 +161,7 @@
         <Group>FlexibleTicketModule</Group>
         <SubGroup>Frontend::Agent::Ticket::ViewFlexible::Sample2</SubGroup>
         <Setting>
-            <String Regex="">Visit at customers site</String>
+            <String Regex="" Translatable="1">Visit at customer's site</String>
         </Setting>
     </ConfigItem>
     <ConfigItem Name="Ticket::Frontend::FlexibleTicketDialog::Sample2###Permission" Required="1" Valid="1">
