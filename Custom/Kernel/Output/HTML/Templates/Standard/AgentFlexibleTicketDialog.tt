@@ -1,6 +1,6 @@
 # --
 # AgentFlexibleTicketDialog.tt - provides HTML form for phone
-# Copyright (C) 2001-2015 OTRS AG, http://otrs.com/
+# Copyright (C) 2001-2016 OTRS AG, http://otrs.com/
 # --
 # This software comes with ABSOLUTELY NO WARRANTY. For details, see
 # the enclosed file COPYING for license information (AGPL). If you
@@ -12,11 +12,11 @@
     <input type="hidden" name="Subaction" value="Store"/>
     <input type="hidden" name="FormID"    value="[% Data.FormID | html %]"/>
     <input type="hidden" name="TicketID"  value="[% Data.TicketID | html %]"/>
-    <input type="hidden" name="DialogName"  value="[% Data.DialogName | html %]"/>
+    <input type="hidden" name="DialogName" value="[% Data.DialogName | html %]"/>
     <div class="LayoutPopup ARIARoleMain">
 
         <div class="Header">
-            <h1>[% Translate(Data.DialogTitle) | html %]: [% Data.TicketNumber | html %] - [% Data.Title | html %]</h1>
+            <h1>[% Translate(Data.DialogTitle) | html %]: [% Config('Ticket::Hook') | html %][% Config('Ticket::HookDivider') | html %][% Data.TicketNumber | html %] &mdash; [% Data.Title | html %]</h1>
             <p class="AsteriskExplanation">[% Translate("All fields marked with an asterisk (*) are mandatory.") | html %]</p>
 
 [% RenderBlockStart("TicketBack") %]
@@ -80,7 +80,10 @@
 [% WRAPPER JSOnDocumentComplete %]
 <script type="text/javascript">//<![CDATA[
     $('#StandardTemplateID').bind('change', function (Event) {
-        Core.AJAX.FormUpdate($(this).closest('form'), 'AJAXUpdate', 'StandardTemplateID', ['RichTextField']);
+        var $TemplateSelect = $(this);
+        Core.Agent.TicketAction.ConfirmTemplateOverwrite('RichText', $TemplateSelect, function () {
+            Core.AJAX.FormUpdate($TemplateSelect.closest('form'), 'AJAXUpdate', 'StandardTemplateID', ['RichTextField']);
+        });
         return false;
     });
 //]]></script>
@@ -92,7 +95,7 @@
 [% InsertTemplate("RichTextEditor.tt") %]
 [% RenderBlockEnd("RichText") %]
 
-                        <textarea id="RichText" name="Body" title="Message body" rows="15" cols="[% Config("Ticket::Frontend::TextAreaNote") %]" class="RichText Validate_Required [% Data.BodyInvalid | html %]">[% Data.Body %]</textarea>
+                        <textarea id="RichText" name="Body" title="[% Translate("Message body") | html %]" rows="15" cols="[% Config("Ticket::Frontend::TextAreaNote") %]" class="RichText Validate_Required [% Data.BodyInvalid | html %]">[% Data.Body %]</textarea>
                         <div id="RichTextError" class="TooltipErrorMessage"><p>[% Translate("This field is required.") | html %]</p></div>
                         <div id="RichTextServerError" class="TooltipErrorMessage"><p>[% Translate("This field is required.") | html %]</p></div>
                     </div>
